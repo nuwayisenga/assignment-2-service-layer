@@ -27,7 +27,7 @@ public interface ItemRepository extends Repository<Item, Long> {
     List<Item> findByTag(String tag);
     
     /**
-     * Find items with title containing search term (case-insensitive)
+     * Find items with a title containing the search term (case-insensitive)
      */
     List<Item> findByTitleContaining(String searchTerm);
     
