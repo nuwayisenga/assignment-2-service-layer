@@ -7,21 +7,16 @@ import org.junit.jupiter.api.DisplayName;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.*;
 
-/**
- * Tests for the repository layer.
- * These tests should pass when the repository is properly implemented.
- */
-class ItemRepositoryTest {
+class QuoteRepositoryTest {
     
-    private ItemRepository repository;
+    private QuoteRepository repository;
     
     @BeforeEach
     void setUp() {
-        repository = new InMemoryItemRepository();
+        repository = new InMemoryQuoteRepository();
         repository.deleteAll();
     }
     

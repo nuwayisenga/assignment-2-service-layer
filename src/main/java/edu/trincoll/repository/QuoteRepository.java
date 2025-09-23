@@ -3,13 +3,8 @@ package edu.trincoll.repository;
 import edu.trincoll.model.Item;
 import java.util.List;
 
-/**
- * TODO: Rename this interface to match your domain
- * Examples: BookmarkRepository, QuoteRepository, etc.
- * 
- * Add domain-specific query methods that make sense for your use case.
- */
-public interface ItemRepository extends Repository<Item, Long> {
+
+public interface QuoteRepository extends Repository<Item, Long> {
     
     /**
      * Find all items with a specific status

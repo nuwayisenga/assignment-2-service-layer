@@ -1,7 +1,7 @@
 package edu.trincoll.controller;
 
 import edu.trincoll.model.Item;
-import edu.trincoll.service.ItemService;
+import edu.trincoll.service.QuoteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,21 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Objects;
 
-/**
- * TODO: Rename this controller to match your domain
- * 
- * REST controller - should ONLY handle HTTP concerns.
- * All business logic should be in the service layer.
- */
+
 @RestController
 @RequestMapping("/api/items")
-public class ItemController {
+public class QuoteController {
     
-    private final ItemService service;
+    private final QuoteService service;
     
-    public ItemController(ItemService service) {
+    public QuoteController(QuoteService service) {
         this.service = service;
     }
     

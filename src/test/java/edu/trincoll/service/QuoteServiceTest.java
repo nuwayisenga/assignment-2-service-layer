@@ -1,8 +1,8 @@
 package edu.trincoll.service;
 
 import edu.trincoll.model.Item;
-import edu.trincoll.repository.InMemoryItemRepository;
-import edu.trincoll.repository.ItemRepository;
+import edu.trincoll.repository.InMemoryQuoteRepository;
+import edu.trincoll.repository.QuoteRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -18,15 +18,15 @@ import static org.assertj.core.api.Assertions.*;
  * Tests for the service layer.
  * Tests both inherited BaseService functionality and ItemService-specific methods.
  */
-class ItemServiceTest {
+class QuoteServiceTest {
     
-    private ItemService service;
-    private ItemRepository repository;
+    private QuoteService service;
+    private QuoteRepository repository;
     
     @BeforeEach
     void setUp() {
-        repository = new InMemoryItemRepository();
-        service = new ItemService(repository);
+        repository = new InMemoryQuoteRepository();
+        service = new QuoteService(repository);
         repository.deleteAll();
     }
     

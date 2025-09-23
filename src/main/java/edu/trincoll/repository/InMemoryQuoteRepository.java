@@ -8,14 +8,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.time.LocalDateTime;
-/**
- * TODO: Rename this class to match your domain
- * 
- * In-memory implementation of the repository using Java collections.
- * Uses ConcurrentHashMap for thread-safety.
- */
+
 @Repository
-public class InMemoryItemRepository implements ItemRepository {
+public class InMemoryQuoteRepository implements QuoteRepository {
     
     private final Map<Long, Item> storage = new ConcurrentHashMap<>();
     private final AtomicLong idGenerator = new AtomicLong(1);

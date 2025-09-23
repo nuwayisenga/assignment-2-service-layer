@@ -4,12 +4,6 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * TODO: Rename this class to match your domain from Assignment 1
- * Examples: Bookmark, Quote, Habit, Recipe, Movie
- * 
- * Add at least 3 meaningful fields beyond the basics shown here.
- */
 public class Item {
     private Long id;
     private String title;
