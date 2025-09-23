@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Objects;
 
 /**
  * TODO: Rename this controller to match your domain
@@ -103,4 +104,10 @@ public class ItemController {
     public List<Item> searchItems(@RequestParam String query) {
         return service.search(query);
     }
+
+    @GetMapping("/categories")
+    public Set<String> getAllCategories() {
+        return service.getAllUniqueCategories();
+    }
+
 }

@@ -19,16 +19,21 @@ public class Item {
     private Set<String> tags;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private String author;
+    private boolean favorite;
+    private double rating;
     
     public enum Status {
         ACTIVE, INACTIVE, ARCHIVED
     }
-    
+
     public Item() {
         this.tags = new HashSet<>();
         this.status = Status.ACTIVE;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
+        this.favorite = false;
+        this.rating = 0.0;
     }
     
     public Item(String title, String description) {
@@ -113,6 +118,33 @@ public class Item {
     
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+        this.updatedAt = LocalDateTime.now();
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
+        this.updatedAt = LocalDateTime.now();
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+        this.updatedAt = LocalDateTime.now();
     }
     
     @Override

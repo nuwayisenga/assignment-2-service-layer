@@ -30,13 +30,24 @@ public interface ItemRepository extends Repository<Item, Long> {
      * Find items with a title containing the search term (case-insensitive)
      */
     List<Item> findByTitleContaining(String searchTerm);
-    
+
     /**
-     * TODO: Add at least 3 more domain-specific query methods
-     * Examples:
-     * - findByAuthor(String author) for quotes
-     * - findByUrl(String url) for bookmarks  
-     * - findOverdue() for habits
-     * - findByIngredient(String ingredient) for recipes
+     * Find quotes by author name
      */
+    List<Item> findByAuthor(String author);
+
+    /**
+     * Find quotes that are marked as favorites
+     */
+    List<Item> findFavorites();
+
+    /**
+     * Find quotes with rating above specified minimum
+     */
+    List<Item> findByMinRating(double minRating);
+
+    /**
+     * Find quotes created within date range
+     */
+    List<Item> findByDateRange(java.time.LocalDateTime start, java.time.LocalDateTime end);
 }
