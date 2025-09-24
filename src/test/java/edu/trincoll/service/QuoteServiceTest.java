@@ -19,7 +19,6 @@ import static org.assertj.core.api.Assertions.*;
  * Tests both inherited BaseService functionality and ItemService-specific methods.
  */
 class QuoteServiceTest {
-    
     private QuoteService service;
     private QuoteRepository repository;
     
